@@ -17,7 +17,9 @@ if (trim($line) === '1')
 {
 	echo 'Generating Instagram Account!' . PHP_EOL;
 	$i = new igGenerator((int)getopt('l:h:p:h')['l'] ?: 1, getopt('l:h:p:h')['p'] ?: null);
-	$i->generateInstagramAccount();
+	$i->generateInstagramAccount(10);
+	
+				   
 }
 else if (trim($line) === '2')
 {
@@ -32,3 +34,4 @@ else if (trim($line) === '2')
 	exit();
 }
 fclose($handle);
+
